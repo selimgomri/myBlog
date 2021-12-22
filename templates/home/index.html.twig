@@ -7,15 +7,20 @@
 
 
 	<h1>Welcome to my blog ✅</h1>
-	<ul>
+	<ul class="flex">
 		{% for i in 0..2 %}
-			<li>
-				{{ articles[i].title }}
-			</li>
+			<div class="card " style="width: 18rem;">
+				<img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/188/188987.png" alt="Card image cap" style="width: 18rem">
+				<div class="card-body">
+					<h5 class="card-title">
+						{{ articles[i].title }}
+					</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+			</div>
 		{% else %}
-			<li>
-				No article found
-			</li>
+			No article found
 		{% endfor %}
 	</ul>
 
