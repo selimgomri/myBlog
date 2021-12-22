@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home Blog!
+{% endblock %}
+
+{% block body %}
+
+
+	<h1>Welcome to my blog ✅</h1>
+	<ul>
+		{% for i in 0..2 %}
+			<li>
+				{{ articles[i].title }}
+			</li>
+		{% else %}
+			<li>
+				No article found
+			</li>
+		{% endfor %}
+	</ul>
+
+
+{% endblock %}
