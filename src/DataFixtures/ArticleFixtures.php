@@ -15,6 +15,8 @@ class ArticleFixtures extends Fixture implements DependentFixtureInterface
             $article = new Article();
             $article->setTitle("Article$i");
             $article->setCategory($this->getReference(CategoryFixures::CATEGORY_DUMP . $i));
+            $article->setContent("text$i");
+            $article->setCover('https://picsum.photos/300/400');
             $manager->persist($article);
         }
 
