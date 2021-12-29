@@ -7,7 +7,6 @@
 
 
 	<h1>Welcome to my blog ✅</h1>
-	 {{ pagination.getTotalItemCount }}
 	<div class="flex">
 		{% for article in pagination %}
 			<div class="card " style="width: 18rem;">
@@ -16,7 +15,9 @@
 					<h5 class="card-title">
 						{{ article.title }}
 					</h5>
-					<p class="card-text"> {{ article.content }} </p>
+					<p class="card-text">
+						{{ article.content }}
+					</p>
 					<a href="#" class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
@@ -24,7 +25,7 @@
 			No article found
 		{% endfor %}
 	</div>
-	 {{ knp_pagination_render(pagination) }}
+	{{ knp_pagination_render(pagination) }}
 
 
 {% endblock %}
