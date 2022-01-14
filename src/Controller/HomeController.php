@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     #[Route('', name: 'home')]
-    #[Route("page/", name: "page/")]
+    #[Route("page/{page}", name: "page/")]
     public function index(ArticleRepository $articleRepository, PaginatorInterface $paginator, Request $request): Response
     {
         $query=$articleRepository->getAllQuery();

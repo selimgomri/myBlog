@@ -4,9 +4,11 @@
 {% endblock %}
 
 {% block body %}
-	
-	<h1>Welcome to my blog ✅</h1>
-	
+
+	<a href="/">
+		<h1>Welcome to my blog ✅</h1>
+	</a>
+
 	<div class="flex">
 		{% for article in pagination %}
 			<div class="card " style="width: 18rem;">
@@ -16,7 +18,7 @@
 						{{ article.title }}
 					</h5>
 					<p class="card-text">
-						{{ article.content }}
+						{{ article.content | raw }}
 					</p>
 					<a href="#" class="btn btn-primary">Read more</a>
 				</div>
